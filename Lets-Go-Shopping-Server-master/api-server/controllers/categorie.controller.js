@@ -59,7 +59,8 @@ exports.findCategory = (req, res) => {
     .catch(err => {
       res
         .status(500)
-        .send({ message: "Error retrieving Categorie with id=" + id });
+        .send({ message:
+          err.message || "Error retrieving Categorie with id=" + id });
     });
 };
 
